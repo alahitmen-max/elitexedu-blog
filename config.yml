@@ -1,9 +1,8 @@
 backend:
-  name: github
-  repo: alahitmen-max/elitexedu-blog
+  name: git-gateway
   branch: main
 
-media_folder: "uploads"
+media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
@@ -11,6 +10,8 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
+    slug: "{{slug}}"
+    format: "markdown"
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "body", label: "Body", widget: "markdown" }
